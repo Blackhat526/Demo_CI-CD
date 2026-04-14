@@ -1,10 +1,18 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: login-form   # 👈 ADD THIS
+        working-directory: login-form
 
     steps:
       - name: Checkout Code
